@@ -304,6 +304,7 @@ nav ul li a:hover::after{
  
     html{
        font-size: 55%;
+       scroll-behavior: smooth;
     }
  
  }
