@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal portfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ 
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.gif" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text" >
+            <p>Software developer</p>
+            <h1>Hi, I'm <span> Maryjoy</span><br> Nyagah from Kenya</h1>
+        </div>
+    </div>
+   </div>
+  <!--------about---->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/image1.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hi, I’m Maryjoy Njeri Nyagah
+                    👀 I’m interested in being a web developer
+                    🌱 Currently am done with my degree couse in IT
+                    💞️ I’m looking to collaborate on High tech companies
+                    📫 How to reach me on nyagahmaryjoy2@gmail.com
+                    ⚡ Fun fact: say hi we might know each other</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>designing web/app interfaces</li>
+                            <li><span>web development</span><br>developing web/app interfaces</li>
+                        </ul>     
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>(sep 09- current)</span><br>Atachee at LCT company</li>
+                            <li><span>(Jan 01- March 03) 2022</span><br>Atachee at NHIF(naivasha branch)</li>    
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2024</span><br>Bachelor in Information Technology at JKUAT (Karen Campus)</li>
+                            <li><span>2020-2021</span><br>Diploma in Infomation Technology at JKUAT (Karen Campuus)</li>
+                            <li><span>2020</span><br>computer Applications at KHIBT (Ngong)</li>
+                        </ul>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+   </div>
+   <!----services-->
+   <div class="services" id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <img src="images/cd.png" alt="" width="60px">
+                    <h2>web desighn</h2>
+                    <p>am relatively great by using html,css,java,javascript</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="images/crop.png" alt="" width="60">
+                    <h2>web development</h2>
+                    <p>am relatively great by using html,css,java,javascript,php,react</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+   </div>
+<!------------portfolio-------->
+<div class="portfolio">
+    <div class="container">
+        <h1 class="sub-title">MY Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work.png"  >
+                <div class="layer">
+                    <h3>Eccomerce website</h3>
+                    <p>sale of car spare parts online by use of php,js,html,css,java</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/nyagahmaryjoy2/e-commerce-website-for-sale-of-car-spare-parts.git">GIt hub code</a>
+                </div>
+               
+            </div>
+            
+            
+            <div class="work">
+            <img src="images/work2.png"  >
+            <div class="layer">
+                <h3>tourisim website</h3>
+                <p>hotel booking pure html,css</p>
+                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagahmaryjoy2/html-tourisim.io.git">GIthub code</a>
+            </div>
+            
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+   <script>
+    var tablinks =document.getElementsByClassName("tab-links");
+    var tabcontents =document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks ){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents ){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+
+   </script>
+   <!----------footer--------------->
+   <footer class="footer" id="contacts">
+
+    <section class="grid">
+ 
+       <div class="box">
+          <h3>Quick links</h3>
+          <a href="#header"> <i class="fas fa-angle-right"></i> Home</a>
+          <a href="#about"> <i class="fas fa-angle-right"></i> About</a>
+          <a href="#services"> <i class="fas fa-angle-right"></i> Services</a>
+          <a href="#portfolio"> <i class="fas fa-angle-right"></i> Portfolio</a>
+          <a href="#contacts"> <i class="fas fa-angle-right"></i> Contacts</a>
+       </div>
+ 
+       <div class="box">
+          <h3>Contact Me.</h3>
+          <a href="tel:123456789"><i class="fas fa-phone"></i> 0727  156 401</a>
+          <a href="tel:234567891"><i class="fas fa-phone"></i> 0776 586 886</a>
+          <a href="mailto:nyagahmaryjoy2@gmail.com"><i class="fas fa-envelope"></i> nyagahmaryjoy2@gmail.com</a>
+          <a href="https://www.google.com/myplace"><i class="fas fa-map-marker-alt"></i> Naivasha </a>
+       </div>
+ 
+       <div class="box">
+          <h3>Follow Me</h3>
+          <a href="https://www.facebook.com/maryjoynjeri" target="_blank"><i class="fab fa-facebook-f"></i>facebook</a>
+          <a href="https://twitter.com/maryjoynjeri" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+          <a href="https://www.instagram.com/_classic.mj_/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+          <a href="https://www.linkedin.com/in/maryjoy-nyagah-3b4685305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i>Linkedin</a>
+          <a href="https://github.com/nyagahmaryjoy2"target="_blank" ><i class="fab fa-github"></i>Git Hub</a>
+       </div>
+ 
+    </section>
+ 
+    <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span style="color: #ff004f;">Maryjoy Njeri Nyagah</span> | all rights reserved!</div>
+ 
+ </footer>
+
+</body>
+</html>
